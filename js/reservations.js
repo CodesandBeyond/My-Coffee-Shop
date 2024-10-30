@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Store reservation details and redirect
                 localStorage.setItem('reservationDetails', JSON.stringify(reservationDetails));
-                window.location.href = 'confirmation.html';
+                window.location.href = './confirmation.html';
             })
             .catch(function(error) {
                 console.error('Failed to send email:', error);
