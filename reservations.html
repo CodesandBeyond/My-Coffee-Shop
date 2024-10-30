@@ -8,8 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "kBoaEvGCIeVQAbKBj",
+      });
+   })();
+    </script>
 </head>
 <body>
 
@@ -63,7 +71,7 @@
             <input type="email" id="email" name="email" required>
         
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" min="" required>
         
             <label for="time">Time:</label>
             <input type="time" id="time" name="time" required>
@@ -76,19 +84,8 @@
     </section>
 
 <!--Scripts-->
-<!--Scripts-->
 <script src="js/script.js"></script>
 <script src="js/reservations.js"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "kBoaEvGCIeVQAbKBj",
-      });
-   })();
-</script>
 
 <section id="footer">
     <br>
