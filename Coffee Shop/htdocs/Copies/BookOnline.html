@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">My Coffee Shop</a>
+            </div>
+
+            <!-- Hamburger Button -->
+
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BookOnline.html" class="bookonline active">Book Online</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Reservations.html">Reservations</a></li>
+            </ul>
+
+            <!-- Cart Icon -->
+
+            <div class="cart">
+                <a href="#">
+                    <img src="img/cart.png" alt="Cart" />
+                    <span class="cart-text">Cart</span>
+                    <span class="cart-count">(0)</span> <!-- This will show the number of items -->
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section id="bksection1">
+        <h1 class="bkonlineheader">Services</h1>
+        <br>
+        <br>
+        <div class="workshop-container">
+
+            <!-- Coffee Brewing Workshop -->
+            <div class="workshop">
+                <h2>Coffee Brewing Workshop</h2>
+                <p class="price">$50</p>
+                <a href="signup-brewing.html" class="signup-btn">Sign Up</a>
+            </div>
+
+            <!-- Coffee Tasting -->
+            <div class="workshop">
+                <h2>Coffee Tasting</h2>
+                <p class="price">$40</p>
+                <a href="signup-tasting.html" class="signup-btn">Sign Up</a>
+            </div>
+
+            <!-- Coffee Art Workshop -->
+            <div class="workshop">
+                <h2>Coffee Art Workshop</h2>
+                <p class="price">$60</p>
+                <a href="signup-art.html" class="signup-btn">Sign Up</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer">
+        <br>
+        <h1>My Coffee Shop</h1>
+        <br>
+        <br>
+        <p class="text-group">
+            <span><strong>Contact Number:</strong> +1 123-456-7890</span>
+            <span><strong>Email:</strong> mycoffeeshop@email.com</span>
+            <span><strong>Address:</strong> 1234 Main St, City, State, 12345</span>
+        </p>
+    </section>
+
+</body>
+</html>

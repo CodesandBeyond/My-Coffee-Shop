@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">My Coffee Shop</a>
+            </div>
+
+            <!-- Hamburger Button -->
+
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Menu.html" class="menu active">Menu</a></li>
+                <li><a href="Reservations.html">Reservations</a></li>
+            </ul>
+
+            <!-- Cart Icon -->
+
+            <div class="cart">
+                <a href="cart.html">
+                    <img src="img/cart.png" alt="Cart" />
+                    <span class="cart-text">Cart</span>
+                    <span class="cart-count">(0)</span> <!-- This will show the number of items -->
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="menu-container">
+        
+        <img src="img/coffee1.jpg" alt="Coffee 1" class="menu-image">
+        <img src="img/coffee2.jpg" alt="Coffee 2" class="menu-image">
+        <img src="img/coffee3.png" alt="Coffee 3" class="menu-image">
+        <img src="img/coffee4.png" alt="Coffee 4" class="menu-image">
+        
+        <div class="menu-content">
+
+            <h1>Coffee Shop Menu</h1>
+
+            <section class="coffeeart-section">
+                <h2 class="h2coffee">Artistic Creations</h2>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span class="coffee-name">Floral Latte Art</span>
+                            <span class="coffee-price">$5.50</span>
+                            <button class="add-to-cart" data-name="Floral Latte Art" data-price="5.50">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Heart Swirl Cappucchino</span>
+                            <span class="coffee-price">$4.75</span>
+                            <button class="add-to-cart" data-name="Heart Swirl Cappucchino" data-price="4.75">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Geometric Mocha Art</span>
+                            <span class="coffee-price">$6.00</span>
+                            <button class="add-to-cart" data-name="Geometric Mocha Art" data-price="6.00">Add to Cart</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <br>
+
+            <section class="specialties-section">
+                <h2 class="h2coffee">Speciality Brews</h2>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span class="coffee-name">Cold Brew Infusion</span>
+                            <span class="coffee-price">$3.50</span>
+                            <button class="add-to-cart" data-name="Cold Brew Infusion" data-price="3.50">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Spiced Chai Latte</span>
+                            <span class="coffee-price">$4.00</span>
+                            <button class="add-to-cart" data-name="Spiced Chai Latte" data-price="4.00">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Matcha Green Tea Latte</span>
+                            <span class="coffee-price">$4.50</span>
+                            <button class="add-to-cart" data-name="Matcha Green Tea Latte" data-price="4.50">Add to Cart</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <br>
+
+            <section class="signatures-section">
+                <h2 class="h2coffee">Signature Flavors</h2>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span class="coffee-name">Vanilla Bean Delight</span>
+                            <span class="coffee-price">$4.50</span>
+                            <button class="add-to-cart" data-name="Vanilla Bean Delight" data-price="4.50">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Hazelnut Chocolate Bliss</span>
+                            <span class="coffee-price">$4.50</span>
+                            <button class="add-to-cart" data-name="Hazelnut Chocolate Bliss" data-price="4.50">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Caramel Macchiato Dream</span>
+                            <span class="coffee-price">$4.50</span>
+                            <button class="add-to-cart" data-name="Caramel Macchiato Dream" data-price="4.50">Add to Cart</button>
+                        </div>
+                        <div class="item">
+                            <span class="coffee-name">Rich Mocha</span>
+                            <span class="coffee-price">$4.50</span>
+                            <button class="add-to-cart" data-name="Rich Mocha" data-price="4.50">Add to Cart</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    
+    <br>
+
+    <section id="footer">
+        <br>
+        <h1>My Coffee Shop</h1>
+        <br>
+        <br>
+        <p class="text-group">
+            <span><strong>Contact Number:</strong> +1 123-456-7890</span>
+            <span><strong>Email:</strong> mycoffeeshop@email.com</span>
+            <span><strong>Address:</strong> 1234 Main St, City, State, 12345</span>
+        </p>
+        <br>
+        <p class="copyright">My Coffee Shop &#169;</p>
+    </section>
+
+</body>
+</html>
