@@ -1,0 +1,625 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Add at the top of the file */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Use rem units for consistent scaling */
+h1 { 
+    font-size: clamp(1.5rem, 5vw, 2rem)
+
+}
+h2 { font-size: 1.5rem; }
+p { font-size: 1rem; }
+
+/* Add more breakpoints */
+@media screen and (max-width: 1024px) {
+    /* Styles for tablets */
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for mobile phones */
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve flexbox layout */
+.workshop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.workshop {
+    width: 100%;
+    max-width: 600px;
+    flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
+}
+
+/* Responsive padding and margins */
+.section {
+    padding: 2rem 5%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .cart {
+        margin-top: 10px;
+    }
+
+    #section1 h1, #section2 h1, #section3 h1 {
+        font-size: 1.5em;
+    }
+
+    .workshop-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .workshop {
+        width: 100%;
+        margin-bottom: 20px;
+        flex: 1 1 100%;;
+        max-width: 100%;
+    }
+
+    .aucoffee {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .austory {
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Navigation Bar */
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo styling */
+.logo a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Nav links styling */
+.nav-links {
+    padding: 0 5%;
+    list-style: none;
+    display: flex;
+    margin: auto;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: "EB Garamond", serif;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+/* Cart styling */
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart a {
+    text-decoration: none; /* This removes the underline */
+    color: inherit; /* Keeps the color of the text consistent */
+}
+
+.cart img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; /* Space between image and text */
+}
+
+.cart-text {
+    font-size: 16px;
+}
+
+.cart-count {
+    font-size: 16px;
+    color: #007bff;
+}
+
+.add-to-cart {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+.add-to-cart:hover {
+    background-color: #fff;
+}
+
+.button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+
+@media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+
+.add-to-cart:disabled,
+.add-to-cart.added-to-cart {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.remove-from-cart {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.remove-from-cart:hover {
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .remove-from-cart {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+
+#cart-header {
+    background-color: #ece0d1;
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Active link styling */
+
+.nav-links a:link {
+    color: blue; /* Default link color */
+}
+
+.nav-links a:hover {
+    color: green; /* Color on hover */
+}
+
+.nav-links a:active {
+    color: red; /* Color when active (clicked) */
+}
+
+/* Homepage */
+
+#section1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #ece0d1;
+
+}
+
+.s1p {
+    font-size: 25px;
+}
+
+#section2  {
+    text-align: left;
+    font-size: 25px;
+    padding-bottom: 5em;
+    padding-left: 1em;
+    padding-top: 1em; 
+    background-color: #967259;
+}
+
+#section3 {
+    text-align: left;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    font-size: 25px;
+    padding-bottom: 20em;
+    padding-left: 1em;
+    padding-top: 1em;
+    background-image: url("../img/coffee-beans-top-view-white-background-space-text.jpg");
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.s3header {
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    width: 175px; /* Fixed width for each workshop */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#footer {
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 15px;
+    padding-bottom: 5em;
+    background-color: #fff2eb;
+}
+
+.text-group span {
+    border-right-style: solid;
+    border-left-style: solid;
+    padding-left: 20px;  /* Space between text and left border */
+    padding-right: 20px; /* Space between text and right border */
+}
+
+.services {
+    border-style: solid;
+}
+
+/* Services Section */
+
+/* Container for all workshops */
+.workshop-container {
+    display: flex;
+    justify-content: space-evenly; /* Align the workshops horizontally */
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Individual workshop box */
+.workshop {
+    border: 2px solid #000; /* Border around each workshop */
+    padding: 20px;
+    text-align: center;
+    width: 600px; /* Fixed width for each workshop */
+    height: 200px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+
+/* Workshop title */
+.workshop h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000; /* Underline beneath the title */
+    font-size: 24px;
+}
+
+/* Price text */
+.price {
+    font-size: 20px;
+    color: #2b2b2b;
+    margin: 10px 0;
+}
+
+/* Sign-up button */
+.signup-btn, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #634832;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #38220f; /* Darker blue on hover */
+}
+
+/* Book Online */
+
+.bkonlineheader {
+    font-size: 35px;
+}
+
+#bksection1  {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 6em;
+    padding-left: 1em;
+    padding-top: 1em; 
+    background-color: #967259;
+}
+
+
+/* About Us Images */
+
+.aucoffee {
+    width: 800px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #000;
+}
+
+.austory {
+    text-align: center;
+    padding-top: 1em;
+}
+
+
+/* Assigning grid areas for images */
+.menu-image:nth-of-type(1) {
+    grid-area: img1;
+}
+
+.menu-image:nth-of-type(2) {
+    grid-area: img2;
+}
+
+.menu-image:nth-of-type(3) {
+    grid-area: img3;
+}
+
+.menu-image:nth-of-type(4) {
+    grid-area: img4;
+}
+
+
+/* Container for the menu */
+.menu-container {
+    display: grid; /* Use grid layout */
+    grid-template-areas: 
+        "img1 menu img2"
+        "img3 menu img4";
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu content area */
+.menu-content {
+    grid-area: menu; /* Assign this area in the grid */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu title */
+.menu-content h1 {
+    text-align: center;
+    color: #6f4c3e;
+    margin-bottom: 20px;
+}
+
+/* Section headers */
+.h2coffee {
+    color: #6f4c3e;
+    border-bottom: 2px solid #6f4c3e;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+li {
+    padding: 10px 0; /* Space between items */
+    font-size: 18px; /* Adjust font size */
+}
+
+/* Flex container for each coffee item */
+.item {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between coffee name and price */
+    align-items: center; /* Center items vertically */
+}
+
+/* Coffee name style */
+.coffee-name {
+    color: #333; /* Darker color for item names */
+}
+
+/* Coffee price style */
+.coffee-price {
+    color: #6f4c3e; /* Price color (you can customize this) */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Styling for the images */
+.menu-image {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Make the image fill the height of the container */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Styling for Reservation Page */
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, .resbtn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.resbtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.h2res {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pres {
+    text-align: center;
+}
+
+#res {
+    background-color: #ece0d1;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+#confirmation {
+    background-color: #ece0d1;
+    text-align: center;
+    padding: 5px 0 5px 0; 
+    border-top: #000 solid 5px;
+    border-bottom: #000 solid 5px;;
+    display: none;
+}
+
+/* Styling for Reservation Confirmation Page */
+#confirmation-page {
+    background-color: #ece0d1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#confirmation-page h2 {
+    color: #6f4c3e;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#confirmation-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#confirmation-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#confirmation-details strong {
+    color: #6f4c3e;
+}
+
+.confirmation-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #634832;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.confirmation-btn:hover {
+    background-color: #38220f;
+}
