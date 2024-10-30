@@ -28,8 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Store reservation details and redirect
                 localStorage.setItem('reservationDetails', JSON.stringify(reservationDetails));
-                window.location.href = './confirmation.html';
+            
+                // Get the current path
+                const currentPath = window.location.pathname;
+            
+                // Check if we're on GitHub Pages
+                if (currentPath.includes('/Website Designs/Business/Coffee Shop/htdocs/')) {
+                    // We're on GitHub Pages, use the full path
+                    window.location.href = '/Website Designs/Business/Coffee Shop/htdocs/confirmation.html';
+                } else {
+                    // We're on local machine or another setup, use relative path
+                    window.location.href = 'confirmation.html';
+                }
             })
+
             .catch(function(error) {
                 console.error('Failed to send email:', error);
                 alert('There was an error processing your reservation. Please try again.');
