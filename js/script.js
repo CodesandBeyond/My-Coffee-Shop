@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Toggle navigation menu on hamburger click
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
     // Retrieve cart from localStorage or initialize as empty array
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -70,6 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCartCount();
     }
 
+    function navigateToPayoutPage() {
+        const cartTotalElement = document.getElementById('cart-total');
+        if (cartTotalElement) {
+            const total = cartTotalElement.textContent.split('$')[1];
+            localStorage.setItem('cartTotal', total);
+            window.location.href = 'payout.html';
+        }
+    }
+
     function addCartControls() {
         document.querySelectorAll('.plus-btn, .minus-btn').forEach(button => {
             button.addEventListener('click', function () {
@@ -121,4 +139,31 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('cart-items')) {
         renderCart();
     }
+
+    const checkoutButton = document.getElementById('checkout-button');
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', navigateToPayoutPage);
+    }
+
+    const totalAmountInput = document.getElementById('total-amount');
+        const cartTotal = localStorage.getItem('cartTotal');
+        
+        if (cartTotal) {
+            totalAmountInput.value = `$${parseFloat(cartTotal).toFixed(2)}`;
+        } else {
+            totalAmountInput.value = '$0.00';
+        }
+
+        const form = document.querySelector('#payment-form form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically handle the form submission,
+            // such as sending the data to a server
+            alert('Thank you for your purchase!');
+            // Clear the cart and total after purchase
+            localStorage.removeItem('cart');
+            localStorage.removeItem('cartTotal');
+            // Redirect to home page or order confirmation page
+            window.location.href = 'index.html';
+        });
 });
